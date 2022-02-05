@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Insitux",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#words"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.insitux",
+          "match": "\\b(#|@|if|if!|when|loop|match|catch|while|function|fn|var!|let!|var|let|return)\\b"
+        },
+        {
+          "name": "keyword.operation.insitux",
+          "match": "(lower\\-case|read\\-lines|trim\\-start|upper\\-case|char\\-code|print\\-str|rand\\-int|trim\\-end|reverse|sort\\-by|starts\\?|substr\\?|symbols|version|append|empty\\?|fast\\!\\=|fast\\/\\/|fast\\<\\=|fast\\>\\=|filter|prompt|reduce|remove|repeat|set\\-at|to\\-key|to\\-num|bool\\?|count|dict\\?|ends\\?|even\\?|fast\\*|fast\\+|fast\\-|fast\\/|fast\\<|fast\\=|fast\\>|floor|func\\?|log10|null\\?|print|range|recur|reset|round|split|tests|wild\\?|write|zero\\?|acos|args|asin|atan|ceil|cosh|dict|eval|ext\\?|find|into|join|key\\?|keys|log2|logn|neg\\?|num\\?|odd\\?|pos\\?|push|rand|read|sect|sinh|sort|sqrt|str\\*|str\\?|tanh|time|trim|vals|vec\\?|\\.\\.\\.|\\>\\>\\>|abs|and|cos|dec|esc|for|idx|inc|len|man|map|max|min|rem|sin|str|tan|val|vec|xor|\\!\\=|\\*\\*|\\-\\>|\\.\\.|\\/\\/|\\<\\<|\\<\\=|\\>\\=|\\>\\>|PI|do|or|\\!|&|\\*|\\+|\\-|\\.|\\/|\\<|\\=|\\>|E|\\^|\\||~)"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.insitux",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.insitux",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.insitux",
+          "match": "(%\\d*|\\d+|true|false)"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "begin": ";",
+          "end": "$"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.insitux"
+}

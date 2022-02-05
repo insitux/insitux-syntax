@@ -1,0 +1,10 @@
+(function esc ch
+  (if (substr? ch ".+-*/!?<>=|^")
+      (str "\\" ch)
+      ch))
+(-> (symbols)
+    (sort-by len)
+    reverse
+    (map (map esc))
+    (map (... str))
+    (join "|"))
