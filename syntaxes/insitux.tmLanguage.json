@@ -23,7 +23,7 @@
       "patterns": [
         {
           "name": "keyword.control.insitux",
-          "match": "\\b(#|@|if|if\\!|when|loop|match|catch|while|function|fn|var\\!|let\\!|var|let|return)\\b"
+          "match": "\\b(#|@|if\\!|if|when|loop|match|catch|while|function|fn|var\\!|let\\!|var|let|return)(?=[\\]\\)\\}\\s])"
         },
         {
           "name": "keyword.operation.insitux",

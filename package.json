@@ -2,7 +2,7 @@
   "name": "insitux-syntax",
   "displayName": "Insitux Syntax",
   "description": "Provides syntax highlighting for Insitux.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "insitux",
   "repository": {
     "type": "git",
