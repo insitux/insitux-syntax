@@ -23,11 +23,19 @@
       "patterns": [
         {
           "name": "keyword.control.insitux",
-          "match": "(?<=[\\[\\(\\{\\s])(#|@|if\\!|if|when|loop|match|catch|while|function|fn|var\\!|let\\!|var|let|return)(?=[\\]\\)\\}\\s])"
+          "match": "(?<=^|[\\[\\(\\{\\s])(#|@|if\\!|if|when|unless|loop|match|catch|while|function|fn|var\\!|let\\!|var|let|return)(?=[\\]\\)\\}\\s]|$)"
         },
         {
           "name": "keyword.operation.insitux",
-          "match": "(?<=[\\[\\(\\{\\s])(lower\\-case|read\\-lines|trim\\-start|upper\\-case|char\\-code|print\\-str|rand\\-int|trim\\-end|reverse|sort\\-by|starts\\?|substr\\?|symbols|version|append|empty\\?|fast\\!\\=|fast\\/\\/|fast\\<\\=|fast\\>\\=|filter|reduce|remove|repeat|set\\-at|to\\-key|to\\-num|bool\\?|count|dict\\?|ends\\?|even\\?|fast\\*|fast\\+|fast\\-|fast\\/|fast\\<|fast\\=|fast\\>|floor|func\\?|log10|null\\?|print|range|recur|reset|round|split|tests|wild\\?|zero\\?|acos|asin|atan|ceil|cosh|dict|eval|ext\\?|find|into|join|key\\?|keys|log2|logn|neg\\?|num\\?|odd\\?|pos\\?|push|rand|sect|sinh|sort|sqrt|str\\*|str\\?|tanh|time|trim|vals|vec\\?|\\.\\.\\.|\\>\\>\\>|abs|and|cos|dec|for|idx|inc|len|map|max|min|rem|sin|str|tan|val|vec|xor|\\!\\=|\\*\\*|\\-\\>|\\.\\.|\\/\\/|\\<\\<|\\<\\=|\\>\\=|\\>\\>|PI|do|or|\\!|&|\\*|\\+|\\-|\\.|\\/|\\<|\\=|\\>|E|\\^|\\||~)(?=[\\]\\)\\}\\s])"
+          "match": "(?<=^|[\\[\\(\\{\\s])(lower\\-case|read\\-lines|trim\\-start|upper\\-case|char\\-code|print\\-str|rand\\-int|trim\\-end|reverse|sort\\-by|starts\\?|substr\\?|symbols|version|append|empty\\?|fast\\!\\=|fast\\/\\/|fast\\<\\=|fast\\>\\=|filter|reduce|remove|repeat|set\\-at|to\\-key|to\\-num|bool\\?|count|dict\\?|ends\\?|even\\?|fast\\*|fast\\+|fast\\-|fast\\/|fast\\<|fast\\=|fast\\>|floor|func\\?|log10|null\\?|print|range|recur|reset|round|split|tests|wild\\?|zero\\?|acos|asin|atan|ceil|cosh|dict|eval|ext\\?|find|into|join|key\\?|keys|log2|logn|neg\\?|num\\?|odd\\?|pos\\?|push|rand|sect|sinh|sort|sqrt|str\\*|str\\?|tanh|time|trim|vals|vec\\?|\\.\\.\\.|\\>\\>\\>|abs|and|cos|dec|for|idx|inc|len|map|max|min|rem|sin|str|tan|val|vec|xor|\\!\\=|\\*\\*|\\-\\>|\\.\\.|\\/\\/|\\<\\<|\\<\\=|\\>\\=|\\>\\>|PI|do|or|\\!|&|\\*|\\+|\\-|\\.|\\/|\\<|\\=|\\>|E|\\^|\\||~)(?=[\\]\\)\\}\\s|$])"
+        }
+      ]
+    },
+    "words": {
+      "patterns": [
+        {
+          "name": "variable.language",
+          "match": "(?<=^|[\\[\\(\\{\\s])(\\$.+?)(?=[\\]\\)\\}\\s]|$)"
         }
       ]
     },
@@ -46,7 +54,7 @@
       "patterns": [
         {
           "name": "constant.numeric.insitux",
-          "match": "(?<=[\\[\\(\\{\\s])(%\\d*|\\d+|true|false|args|(:[^\\]\\)\\}]+?)(?=[\\]\\)\\}\\s]))"
+          "match": "(?<=^|[\\[\\(\\{\\s])(%\\d*|\\d+|true|false|args|(:[^\\]\\)\\}]+?))(?=[\\]\\)\\}\\s]|$)"
         }
       ]
     },
