@@ -41,12 +41,28 @@
     },
     "strings": {
       "name": "string.quoted.double.insitux",
-      "begin": "\"",
-      "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.insitux",
-          "match": "\\\\."
+          "name": "string.quoted.single.insitux",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.insitux",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.double.insitux",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.insitux",
+              "match": "\\\\."
+            }
+          ]
         }
       ]
     },
