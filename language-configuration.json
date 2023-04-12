@@ -1,6 +1,5 @@
 {
     "comments": {
-        // symbol used for single line comment. Remove this entry if your language does not support line comments
         "lineComment": ";",
     },
     // symbols used as brackets
@@ -26,7 +25,8 @@
         ["{", "}"],
         ["[", "]"],
         ["(", ")"],
-        ["\"", "\""]
+        ["\"", "\""],
+        ["'", "'"]
     ],
     // symbols that can be used to surround a selection
     "surroundingPairs": [
@@ -39,6 +39,7 @@
         ["{", "}"],
         ["[", "]"],
         ["(", ")"],
-        ["\"", "\""]
+        ["\"", "\""],
+        ["'", "'"]
     ]
 }
