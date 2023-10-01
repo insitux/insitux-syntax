@@ -3,6 +3,7 @@
       (str "\\\\" ch)
       ch))
 (-> (symbols)
+    (filter about)
     (sort-by len)
     reverse
     (map (map esc))
